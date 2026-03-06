@@ -97,62 +97,44 @@
             <p class="text-gray-800 text-lg leading-snug font-medium">
 
                 "40 años renovando la comodidad de los hogares cartageneros con estilo y detalle."
-    <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tapicería Romero - Cartagena</title>
-</head>
-<body style="margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #f0f2f5; text-align: center; color: #333;">
+<div id="maestro-romero" style="text-align: center; font-family: sans-serif; transition: 0.3s;">
+    
+    <button onclick="cambiarModo()" style="background: #444; color: white; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer; margin: 20px 0;">🌓 CAMBIAR MODO</button>
 
-    <header style="background: linear-gradient(135deg, #00a859, #007d43); color: white; padding: 30px 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-        <h1 style="margin: 0; font-size: 28px; letter-spacing: 1px;">TAPICERÍA ROMERO</h1>
-        <p style="margin: 10px 0 0; font-weight: 300; opacity: 0.9;">40 años renovando los hogares cartageneros</p>
-    </header>
+    <nav style="display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; padding: 0 10px;">
+        <a href="tel:+573107085531" style="background: white; border-bottom: 4px solid #3498db; width: 100px; height: 90px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; border-radius: 15px; color: #555; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <span style="font-size: 24px;">📞</span><span>LLAMAR</span>
+        </a>
+        <a href="https://wa.me/573107085531?text=Hola,%20quisiera%20cotizar%20un%20servicio" style="background: white; border-bottom: 4px solid #2ecc71; width: 100px; height: 90px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; border-radius: 15px; color: #555; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <span style="font-size: 24px;">💬</span><span>CHARLAR</span>
+        </a>
+        <a href="#mapa-google" style="background: white; border-bottom: 4px solid #e74c3c; width: 100px; height: 90px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; border-radius: 15px; color: #555; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            <span style="font-size: 24px;">📍</span><span>MAPA</span>
+        </a>
+    </nav>
 
-    <main style="padding: 20px; max-width: 600px; margin: auto;">
-        <h2 style="margin-bottom: 25px; color: #007d43;">Nuestro Catálogo</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; padding: 20px;">
+        <div style="background:white; border-radius:10px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.2);"><img src="sofa1.png" style="width:100%; height:120px; object-fit:cover;"><p style="font-size:10px; color:#333; margin:5px;">SOFÁS</p></div>
+        <div style="background:white; border-radius:10px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.2);"><img src="sillagamer1.jpg" style="width:100%; height:120px; object-fit:cover;"><p style="font-size:10px; color:#333; margin:5px;">GAMER</p></div>
+        <div style="background:white; border-radius:10px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.2);"><img src="silladeoficina2.png" style="width:100%; height:120px; object-fit:cover;"><p style="font-size:10px; color:#333; margin:5px;">OFICINA</p></div>
+        <div style="background:white; border-radius:10px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.2);"><img src="mecedoras1.jpg" style="width:100%; height:120px; object-fit:cover;"><p style="font-size:10px; color:#333; margin:5px;">MECEDORAS</p></div>
+        <div style="background:white; border-radius:10px; overflow:hidden; box-shadow:0 2px 5px rgba(0,0,0,0.2);"><img src="antesydespues1.jpg" style="width:100%; height:120px; object-fit:cover;"><p style="font-size:10px; color:#333; margin:5px;">RESTAURACIÓN</p></div>
+    </div>
 
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-            
-            <div style="grid-column: span 2;">
-                <img src="sofa1.png" style="width: 100%; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); border: 3px solid white;">
-                <p style="font-size: 14px; margin-top: 5px; font-weight: bold;">Sofás de Lujo</p>
-            </div>
+    <div id="mapa-google" style="padding: 20px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.168516008139!2d-75.528437!3d10.428125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDI1JzQxLjMiTiA3NcKwMzEnNDIuNCJX!5e0!3m2!1ses!2sco!4v1709690000000!5m2!1ses!2sco" width="100%" height="250" style="border:0; border-radius:15px;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
 
-            <div>
-                <img src="sillagamer1.jpg" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                <p style="font-size: 13px;">silla 
-                Gamer</p>
-            </div>
-
-            <div>
-                <img src="silladeoficina2.png" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                <p style="font-size: 13px;">Oficina</p>
-            </div>
-
-            <div>
-                <img src="mecedoras1.jpg" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                <p style="font-size: 13px;">Mecedoras</p>
-            </div>
-
-            <div>
-                <img src="antesydespués1.jpg" style="width: 100%; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                <p style="font-size: 13px;">Restauraciones</p>
-            </div>
-
-        </div>
-
-        <p style="margin: 40px 0 100px; color: #666; font-style: italic; line-height: 1.6;">
-            "Calidad garantizada en cada detalle y estilo para su comodidad."
-        </p>
-    </main>
-
-    <a href="https://wa.me/573107085531" style="position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); background: #25d366; color: white; padding: 16px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 18px; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); display: flex; align-items: center; width: 80%; justify-content: center;">
-        📲 COTIZAR POR WHATSAPP
-    </a>
-
-</body>
-</html>
+    <script>
+        function cambiarModo() {
+            var el = document.getElementById('maestro-romero');
+            if (el.style.backgroundColor === 'rgb(30, 30, 30)') {
+                el.style.backgroundColor = 'transparent'; el.style.color = 'inherit';
+            } else {
+                el.style.backgroundColor = '#1e1e1e'; el.style.color = '#f4f4f4';
+            }
+        }
+    </script>
+</div>
+          
               
