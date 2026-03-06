@@ -3,77 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tapicería Romero | Maestros Artesanos</title>
+    <title>Tapicería Romero | Cartagena</title>
     <style>
+        /* CONFIGURACIÓN DE COLORES */
         :root {
             --bg: #f4f7f6;
             --header: #1e4d3a;
             --text: #333;
+            --card: #ffffff;
+            --btn-text: #555;
         }
 
-        /* --- MODO NOCHE --- */
+        /* CONFIGURACIÓN MODO NOCHE */
         .dark-mode {
             --bg: #121212;
             --header: #0d261c;
             --text: #f4f4f4;
+            --card: #1e1e1e;
+            --btn-text: #e0e0e0;
         }
 
         body { 
-            background-color: var(--bg); color: var(--text); 
-            font-family: 'Segoe UI', sans-serif; margin: 0; transition: 0.3s; 
+            background-color: var(--bg); 
+            color: var(--text); 
+            font-family: 'Segoe UI', sans-serif; 
+            margin: 0; 
+            transition: 0.3s; 
         }
 
-        /* --- CABECERA --- */
+        /* CABECERA VERDE REDONDEADA */
         header { 
-            background: var(--header); color: white; text-align: center; 
-            padding: 40px 20px 60px; /* Más padding abajo para que no tape los botones */
-            border-bottom-left-radius: 40px; border-bottom-right-radius: 40px; 
+            background: var(--header); 
+            color: white; 
+            text-align: center; 
+            padding: 50px 20px 80px; /* Espacio extra para los botones */
+            border-bottom-left-radius: 45px; 
+            border-bottom-right-radius: 45px; 
             position: relative;
         }
 
         .logo-circle {
-            background: white; width: 70px; height: 70px; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; font-size: 30px;
+            background: white; 
+            width: 80px; 
+            height: 80px; 
+            border-radius: 50%;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin: 0 auto 15px; 
+            font-size: 35px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
 
         .btn-noche {
-            position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.2);
-            border: none; color: white; padding: 8px 12px; border-radius: 20px; cursor: pointer; font-size: 10px;
+            position: absolute; 
+            top: 20px; 
+            right: 20px; 
+            background: rgba(255,255,255,0.2);
+            border: none; 
+            color: white; 
+            padding: 8px 15px; 
+            border-radius: 20px; 
+            cursor: pointer; 
+            font-size: 11px;
+            font-weight: bold;
         }
 
-        /* --- BOTONES DE CONTACTO --- */
+        /* BOTONES DE CONTACTO (ESTILO CUADRADO) */
         .contact-grid {
-            display: flex; justify-content: center; gap: 12px; 
-            margin-top: -30px; /* Posición perfecta */
+            display: flex; 
+            justify-content: center; 
+            gap: 15px; 
+            margin-top: -45px; /* Los sube para que muerdan el verde */
             padding: 0 10px;
+            position: relative;
+            z-index: 100;
         }
 
         .btn-box {
-            background: white; width: 95px; height: 85px; border-radius: 15px;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            text-decoration: none; font-size: 11px; font-weight: bold; color: #555;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            background: var(--card); 
+            width: 100px; 
+            height: 90px; 
+            border-radius: 18px;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center;
+            text-decoration: none; 
+            font-size: 11px; 
+            font-weight: bold; 
+            color: var(--btn-text);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            transition: 0.2s;
         }
-        .blue { border-bottom: 4px solid #3498db; }
-        .green { border-bottom: 4px solid #2ecc71; }
-        .red { border-bottom: 4px solid #e74c3c; }
 
-        /* --- SOBRE NOSOTROS --- */
-        .info-section { text-align: center; padding: 40px 20px; }
-        .main-text { font-size: 18px; font-style: italic; max-width: 500px; margin: 0 auto; line-height: 1.5; }
+        .btn-box:active { transform: scale(0.95); }
 
-        /* --- GALERÍA --- */
+        .blue { border-bottom: 5px solid #3498db; }
+        .green { border-bottom: 5px solid #2ecc71; }
+        .red { border-bottom: 5px solid #e74c3c; }
+
+        /* SECCIÓN DE TEXTO (40 AÑOS) */
+        .info-section { 
+            text-align: center; 
+            padding: 70px 25px 30px; 
+        }
+
+        .main-text { 
+            font-size: 19px; 
+            font-style: italic; 
+            max-width: 550px; 
+            margin: 0 auto; 
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        /* GALERÍA DE IMÁGENES */
         .gallery {
-            display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 15px; padding: 20px;
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px; 
+            padding: 20px;
         }
-        .img-card { 
-            background: white; border-radius: 12px; overflow: hidden; 
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; color: #333;
-        }
-        .img-card img { width: 100%; height: 130px; object-fit: cover; display: block; }
-        .img-card p { font-size: 10px; padding: 8px; margin: 0; font-weight: bold; }
 
+        .img-card { 
+            background: var(--card); 
+            border-radius: 15px; 
+            overflow: hidden; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            text-align: center;
+        }
+
+        .img-card img { 
+            width: 100%; 
+            height: 140px; 
+            object-fit: cover; 
+            display: block; 
+        }
+
+        .img-card p { 
+            font-size: 11px; 
+            padding: 10px; 
+            margin: 0; 
+            font-weight: bold; 
+            color: var(--text);
+        }
+
+        /* ESPACIO PARA DESLIZAR AL FINAL */
+        .footer-spacer {
+            height: 180px; 
+            text-align: center;
+            padding-top: 60px;
+            opacity: 0.6;
+            font-size: 13px;
+        }
     </style>
 </head>
 <body>
@@ -81,35 +164,55 @@
 <header>
     <button class="btn-noche" onclick="toggleMode()">🌓 MODO NOCHE</button>
     <div class="logo-circle">🛋️</div>
-    <h1 style="margin:0;">Tapicería Romero</h1>
-    <p style="margin:5px 0; opacity:0.8;">MAESTROS ARTESANOS</p>
+    <h1 style="margin:0; font-size: 26px;">Tapicería Romero</h1>
+    <p style="margin:5px 0; opacity:0.9; font-size: 14px;">MAESTROS ARTESANOS</p>
 </header>
 
 <nav class="contact-grid">
-    <a href="tel:+573107085531" class="btn-box blue"><span>📞</span><br>LLAMAR</a>
-    <a href="https://wa.me/573107085531?text=Hola,%20quisiera%20cotizar%20un%20servicio" class="btn-box green"><span>💬</span><br>CHARLAR</a>
-    <a href="https://maps.app.goo.gl/vQonKBytKndNscJm9" target="_blank" class="btn-box red"><span>📍</span><br>MAPA</a>
+    <a href="tel:+573107085531" class="btn-box blue">
+        <span style="font-size: 26px;">📞</span><br>LLAMAR
+    </a>
+    
+    <a href="https://wa.me/573107085531?text=Hola,%20quisiera%20cotizar%20un%20servicio%20de%20tapicería" class="btn-box green">
+        <span style="font-size: 26px;">💬</span><br>CHARLAR
+    </a>
+    
+    <a href="https://www.google.com/maps/search/?api=1&query=Tapiceria+Romero+Torices+Cartagena" target="_blank" class="btn-box red">
+        <span style="font-size: 26px;">📍</span><br>MAPA
+    </a>
 </nav>
 
 <section class="info-section">
-    <p style="color:#888; letter-spacing:2px; font-size:10px; margin-bottom: 10px;">SOBRE NOSOTROS</p>
-    <p class="main-text">"Más de 40 años renovando la comodidad de los hogares cartageneros con estilo y detalle."</p>
+    <p style="color:#888; letter-spacing:2px; font-size:11px; margin-bottom: 12px; font-weight: bold;">NUESTRA TRAYECTORIA</p>
+    <p class="main-text">"Más de 40 años renovando la comodidad de los hogares cartageneros con estilo, detalle y pasión."</p>
 </section>
 
 <div class="gallery">
-    <div class="img-card"><img src="sofa1.png"><p>SOFÁS</p></div>
-    <div class="img-card"><img src="sillagamer1.jpg"><p>GAMER</p></div>
+    <div class="img-card"><img src="sofa1.png"><p>SOFÁS PREMIUM</p></div>
+    <div class="img-card"><img src="sillagamer1.jpg"><p>LÍNEA GAMER</p></div>
     <div class="img-card"><img src="silladeoficina2.png"><p>OFICINA</p></div>
     <div class="img-card"><img src="mecedoras1.jpg"><p>MECEDORAS</p></div>
     <div class="img-card"><img src="antesydespues1.jpg"><p>RESTAURACIONES</p></div>
 </div>
 
+<div class="footer-spacer">
+    <p>📍 Calle 31D #56 - 27, Barrio Torices</p>
+    <p>Cartagena - Bolívar</p>
+</div>
+
 <script>
     function toggleMode() {
         document.body.classList.toggle('dark-mode');
+        // Guardar la preferencia
+        const modo = document.body.classList.contains('dark-mode') ? 'oscuro' : 'claro';
+        localStorage.setItem('tema', modo);
+    }
+
+    // Cargar el modo al abrir la página
+    if (localStorage.getItem('tema') === 'oscuro') {
+        document.body.classList.add('dark-mode');
     }
 </script>
 
 </body>
 </html>
-
