@@ -27,6 +27,7 @@
         header { 
             background: var(--header); color: white; text-align: center; 
             padding: 40px 20px; border-bottom-left-radius: 40px; border-bottom-right-radius: 40px; 
+            position: relative;
         }
 
         .logo-circle {
@@ -50,8 +51,8 @@
         .red { border-bottom: 4px solid #e74c3c; }
 
         /* SECCIÓN TEXTO 40 AÑOS */
-        .info-section { text-align: center; padding: 50px 20px 20px; }
-        .main-text { font-size: 18px; font-style: italic; max-width: 500px; margin: 0 auto; }
+        .info-section { text-align: center; padding: 60px 20px 20px; }
+        .main-text { font-size: 18px; font-style: italic; max-width: 500px; margin: 0 auto; line-height: 1.5; }
 
         /* GALERÍA DE IMÁGENES */
         .gallery {
@@ -62,15 +63,16 @@
             background: var(--card); border-radius: 12px; overflow: hidden; 
             box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center;
         }
-        .img-card img { width: 100%; height: 130px; object-fit: cover; }
-        .img-card p { font-size: 10px; padding: 8px; margin: 0; }
+        .img-card img { width: 100%; height: 130px; object-fit: cover; display: block; }
+        .img-card p { font-size: 10px; padding: 8px; margin: 0; font-weight: bold; }
 
         .btn-noche {
             position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.2);
             border: none; color: white; padding: 8px 12px; border-radius: 20px; cursor: pointer;
+            font-size: 10px; font-weight: bold;
         }
 
-        iframe { width: 100%; border-radius: 15px; border: none; margin-top: 20px; }
+        .map-frame { width: 100%; border-radius: 15px; border: none; height: 300px; margin-top: 20px; }
     </style>
 </head>
 <body>
@@ -78,18 +80,20 @@
 <header>
     <button class="btn-noche" onclick="toggleMode()">🌓 MODO NOCHE</button>
     <div class="logo-circle">🛋️</div>
-    <h1 style="margin:0;">Tapicería Romero</h1>
-    <p style="margin:5px 0; opacity:0.8;">MAESTROS ARTESANOS</p>
+    <h1 style="margin:0; font-size: 24px;">Tapicería Romero</h1>
+    <p style="margin:5px 0; opacity:0.8; font-size: 14px;">MAESTROS ARTESANOS</p>
 </header>
 
 <nav class="contact-grid">
     <a href="tel:+573107085531" class="btn-box blue"><span>📞</span><br>LLAMAR</a>
+    
     <a href="https://wa.me/573107085531?text=Hola,%20quisiera%20cotizar%20un%20servicio%20de%20tapicería" class="btn-box green"><span>💬</span><br>CHARLAR</a>
-    <a href="#mapa" class="btn-box red"><span>📍</span><br>MAPA</a>
+    
+    <a href="https://www.google.com/maps/dir/?api=1&destination=10.4363,-75.5284" target="_blank" class="btn-box red"><span>📍</span><br>MAPA</a>
 </nav>
 
 <section class="info-section">
-    <p style="color:#888; letter-spacing:2px; font-size:10px;">SOBRE NOSOTROS</p>
+    <p style="color:#888; letter-spacing:2px; font-size:10px; margin-bottom: 10px;">SOBRE NOSOTROS</p>
     <p class="main-text">"Más de 40 años renovando la comodidad de los hogares cartageneros con estilo y detalle."</p>
 </section>
 
@@ -98,11 +102,11 @@
     <div class="img-card"><img src="sillagamer1.jpg"><p>GAMER</p></div>
     <div class="img-card"><img src="silladeoficina2.png"><p>OFICINA</p></div>
     <div class="img-card"><img src="mecedoras1.jpg"><p>MECEDORAS</p></div>
-    <div class="img-card"><img src="antesydespues1.jpg"><p>RESTAURACIONES</p></div>
+    <div class="img-card"><img src="antesydespues.jpg"><p>RESTAURACIONES</p></div>
 </div>
 
-<div id="mapa" style="padding:20px;">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.18181818!2d-75.52!3d10.42!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef625877e216373%3A0xfe103658bdffb1cc!2sCl.%2031d%20%2356-27%2C%20Torices!5e0!3m2!1ses!2sco!4v1700000000000" height="300" loading="lazy"></iframe>
+<div id="seccion-mapa" style="padding:20px;">
+    <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.368305386043!2d-75.53097492410886!3d10.432095065406085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef62f847e216373%3A0xfe103658bdff71c4!2sTAPICERIA%20ROMERO!5e0!3m2!1ses!2sco!4v1709870000000!5m2!1ses!2sco" loading="lazy"></iframe>
 </div>
 
 <script>
@@ -113,3 +117,5 @@
 
 </body>
 </html>
+
+
